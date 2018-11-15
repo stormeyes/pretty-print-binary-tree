@@ -166,10 +166,10 @@ class Node:
         # -----------------------------
         # print node with/without dashes
         if first_item_in_layer:
-          print (" " * spaces_front) + (dash_left * dash_count) + (node.data) + (dash_right * dash_count),
+          print (" " * spaces_front) + (dash_left * dash_count) + str(node.data) + (dash_right * dash_count),
           first_item_in_layer = False
         else:
-          print (" " * (spaces_mid-extra_spaces)) + (dash_left * dash_count) + (node.data) + (dash_right * dash_count),
+          print (" " * (spaces_mid-extra_spaces)) + (dash_left * dash_count) + str(node.data) + (dash_right * dash_count),
         # ----------------------------->
 
         if node.left: queue.enqueue(node.left)
